@@ -1,0 +1,24 @@
+ 
+    <div class="container">
+      <!-- <h1 class="header" style="text-align:center">welcome to Company</h1> -->
+      
+        search: <input #serchText [(ngModel)] ='searchText'  (input)='searchMethod(searchText)'   type="text"/>
+        <ul *ngFor = 'let comp of allCompany'>
+          <li>{{comp.name}}</li>
+        </ul>
+        <table>
+          <tr *ngFor="let data of companyDetailsData">
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.phoneNo}}</td>
+            <td>
+              <button (click)="goToDetail(data.id)">view details</button>
+              <button>Disable</button>
+            </td>
+          </tr>
+          </table>
+        
+          <a routerLink = '/login'>logout</a>
+      
+      </div>

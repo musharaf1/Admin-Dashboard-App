@@ -1,0 +1,14 @@
+
+<div class="container">
+    <h1 class="header" style="text-align:center">welcome to Login</h1>
+          username:<br>
+          <input   #name1 type="text"><br>
+          password:<br>
+          <input   #password1 type="text" ><br>
+          <br>
+          <input (click)="postAdmin(name1.value, password1.value)" type="button" value="Submit">
+          
+          <div *ngIf="errHandler">invalid username or password</div>
+    </div>
+    
+    
